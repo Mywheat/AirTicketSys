@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JavaWeb201890102</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 2018.1.10 change-->
+   <servlet>
+      <servlet-name>FirstServlet</servlet-name>
+      <servlet-class>FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FirstServlet</servlet-name>
+      <url-pattern>/firstServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+      <servlet-name>LoginServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>LoginServlet</servlet-name>
+      <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <filter>
+    <filter-name>AuthorityFilter</filter-name>
+    <filter-class>cn.edu.lingnan.filter.AuthorityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    <filter-name>AuthorityFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+    <!-- 2018.4.24 xiaoshi-->
+    <servlet>
+      <servlet-name>RegisterServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>RegisterServlet</servlet-name>
+      <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+     <!-- 2018.4.25 xiaoshi-->
+    <servlet>
+      <servlet-name>LogoutServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>LogoutServlet</servlet-name>
+      <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+     <!-- 2018.5.5 xiaoshi-->
+    <servlet>
+      <servlet-name>FindAllUser</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindAllUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindAllUser</servlet-name>
+      <url-pattern>/admin/findAllUser</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.5.7 xiaoshi-->
+    <servlet>
+      <servlet-name>DeleteClientServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteClientServlet</servlet-name>
+      <url-pattern>/admin/deleteClientServlet</url-pattern>
+    </servlet-mapping>
+
+    
+     <servlet>
+      <servlet-name>UpdateClientServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.UpdateClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>UpdateClientServlet</servlet-name>
+      <url-pattern>/admin/updateClientServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.5.8 xiaoshi -->
+    <filter>
+	  <filter-name>CharacterEncodingFilter</filter-name>
+	  <filter-class>cn.edu.lingnan.filter.CharacterEncodingFilter</filter-class>
+	  <init-param>
+	     <param-name>ecoding</param-name>
+	     <param-value>GBK</param-value>
+	  </init-param>
+    </filter>
+    <filter-mapping>
+	  <filter-name>CharacterEncodingFilter</filter-name>
+	  <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- 2018.5.11 xiaoshi -->
+    <jsp-config>
+      <taglib>
+        <taglib-uri>/mytagstest</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/myTags.tld</taglib-location>
+      </taglib>
+      <!-- 2018.5.15 xiaoshi -->
+      <taglib>
+        <taglib-uri>/jstlc</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+      </taglib>
+      <taglib>
+        <taglib-uri>/jstlsql</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/sql.tld</taglib-location>
+      </taglib>    
+    </jsp-config>
+     <!-- 2018.5.23 xiaoshi-->
+    <servlet>
+      <servlet-name>DeleteCheckServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteCheckServlet</servlet-name>
+      <url-pattern>/admin/deleteCheckServlet</url-pattern>
+    </servlet-mapping>
+        <!-- 2018.5.5 xiaoshi-->
+    <servlet>
+      <servlet-name>FindAllTicket</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindAllTicket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindAllTicket</servlet-name>
+      <url-pattern>/admin/findAllTicket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>UpdateTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.UpdateTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>UpdateTicketServlet</servlet-name>
+      <url-pattern>/admin/updateTicketServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.5.29 xiaoshi-->
+    <servlet>
+      <servlet-name>DeleteTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteTicketServlet</servlet-name>
+      <url-pattern>/admin/deleteTicketServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>DeleteCheckTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteCheckTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteCheckTicketServlet</servlet-name>
+      <url-pattern>/admin/deleteCheckTicketServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.5.30 xiaoshi-->
+    <servlet>
+      <servlet-name>InsertUserServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.InsertUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>InsertUserServlet</servlet-name>
+      <url-pattern>/admin/insertUserServlet</url-pattern>
+    </servlet-mapping>
+        <servlet>
+      <servlet-name>InsertTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.InsertTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>InsertTicketServlet</servlet-name>
+      <url-pattern>/admin/insertTicketServlet</url-pattern>
+    </servlet-mapping>
+     <!-- 2018.5.31 xiaoshi-->
+    <servlet>
+      <servlet-name>FindAllTicketpurchase</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindAllTicketpurchase</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindAllTicketpurchase</servlet-name>
+      <url-pattern>/admin/findAllTicketpurchase</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>UpdateTicketpurchaseServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.UpdateTicketpurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>UpdateTicketpurchaseServlet</servlet-name>
+      <url-pattern>/admin/updateTicketpurchaseServlet</url-pattern>
+    </servlet-mapping>
+      <!-- 2018.6.1 xiaoshi-->
+    <servlet>
+      <servlet-name>DeleteTicketpurchaseServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteTicketpurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteTicketpurchaseServlet</servlet-name>
+      <url-pattern>/admin/deleteTicketpurchaseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>FindTicket</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindTicket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindTicket</servlet-name>
+      <url-pattern>/findTicket</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>InsertTicketpurchaseServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.InsertTicketpurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>InsertTicketpurchaseServlet</servlet-name>
+      <url-pattern>/admin/insertTicketpurchaseServlet</url-pattern>
+    </servlet-mapping>
+     <!-- 2018.6.1 xiaoshi-->
+    <servlet>
+      <servlet-name>DeleteCheckTicketpurchaseServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.DeleteCheckTicketpurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DeleteCheckTicketpurchaseServlet</servlet-name>
+      <url-pattern>/admin/deleteCheckTicketpurchaseServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.6.5 xiaoshi-->
+    <servlet>
+      <servlet-name>ClientTicketpurchaseServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.ClientTicketpurchaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ClientTicketpurchaseServlet</servlet-name>
+      <url-pattern>/clientTicketpurchaseServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.6.6 xiaoshi-->
+    <servlet>
+      <servlet-name>FindClientTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindClientTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindClientTicketServlet</servlet-name>
+      <url-pattern>/findClientTicketServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>FindOneUserInfo</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.FindOneUserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FindOneUserInfo</servlet-name>
+      <url-pattern>/findOneUserInfo</url-pattern>
+    </servlet-mapping>
+      <servlet>
+      <servlet-name>SearchTicketServlet</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.SearchTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SearchTicketServlet</servlet-name>
+      <url-pattern>/searchTicketServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.6.8 xiaoshi-->
+    <servlet>
+      <servlet-name>SearchOneUserByAdmin</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.SearchOneUserByAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SearchOneUserByAdmin</servlet-name>
+      <url-pattern>/admin/searchOneUserByAdmin</url-pattern>
+    </servlet-mapping>
+    <!-- 2018.6.11 xiaoshi-->
+    <servlet>
+      <servlet-name>UpdateUserByself</servlet-name>
+      <servlet-class>cn.edu.lingnan.servlet.UpdateUserByself</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>UpdateUserByself</servlet-name>
+      <url-pattern>/updateUserByself</url-pattern>
+    </servlet-mapping>
+</web-app>
